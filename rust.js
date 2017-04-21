@@ -1,7 +1,10 @@
-function scroll1() {
-    window.scrollBy(0,500);
+function scroll1(id) {
+    var rect = document.getElementById(id).getBoundingClientRect();
+    window.scrollBy(0,rect.top);
 }
 
 function homeScroll(){
-    window.scrollBy(0,-50000000); 
+    var rect = document.getElementsByTagName('html')[0].getBoundingClientRect();
+    
+    window.scrollBy(0,rect.top); 
 }
