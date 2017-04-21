@@ -10,7 +10,7 @@ function homeScroll(){
 }
 
 function openInNewTab(fxn) {
-	var url = "https://play.rust-lang.org/?code=".concat(encodeURI(fxn));
+	var url = "https://play.rust-lang.org/?code=".concat(encodeURIComponent(fxn));
   	var win = window.open(url, '_blank');
   	win.focus();
 }
