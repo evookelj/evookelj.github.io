@@ -1,5 +1,5 @@
 function scroll1() {
-    window.scrollBy(0,5000);
+    window.scrollBy(0,500);
 }
 
 function homeScroll(){
