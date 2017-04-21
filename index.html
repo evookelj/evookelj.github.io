@@ -17,6 +17,66 @@
     <br>
     <br>
     <br>
+    <div class = "info-block">
+
+      Why Rust
+    - Good balance between low level verbosity and high level productivity
+    - Rust has a focus on safety and speed
+    - Great memory safety
+    - Automatic garbage collection
+    - Rust won the first place for Most Loved Programming Language of 2016 in the Stack Overflow Developer Survey !!! :)
+    </div>
+    <div class = "info-block">
+    Ownership
+    - Variable bindings have ownership of what they're bound to
+    - let v = vec![1,2,3];
+    - v comes into scope
+    - vector is created on stack
+    - space for elements is allocated on heap
+    - v goes out of scope -> Rust cleans stack and heap of v
+    - exactly one binding has ownership of resource
+    - let v2 = v;
+    - shallow copy of v created on stack but not in heap
+    - so now v cannot be used: v2 is the only valid connection to v
+    </div>
+    <div class = "info-block">
+
+    References and Borrowing
+    - let v2 = &v;
+    - using & makes v2 a reference to v
+    - this lets it borrow ownership (resource not deallocated once v2 is out of scope)
+    - allows you to continue referring to v once v2 is out of scope
+    - let v2 = &mut v;
+    - makes a mutable reference to v (in Rust, all variable bindings are immutable by default)
+    - in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )
+    - Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)
+    </div>
+    <div class = "info-block">
+    borrowing: the rulez
+    - any borrow must last for a scope no greater than that of the owner
+    - you may have one or the other of these two kinds of borrows, but not both at the same time:
+    - one or more references (&T) to a resource
+    - exactly one mutable reference (&mut T)
+    - avoids a data race
+    </div>
+    <div class = "info-block">
+    Lifetimes
+    - Why they are useful
+    - I acquire a handle to resource x
+    - I lend you a reference to resource x (let's call it y)
+    - I am done with x and deallocate it
+    - You decide to use y (which uses x)
+    - Dangling pointer (Rust: Nuh uh!)
+    - Lifetime: the scope that a reference is valid for, or how long the resource lives
+    - Scope of a reference: think of it as from the curly brace before it to the one matching that
+    </div>
+    <div class = "info-block">
+    elided lifetimes: the rulez
+    - When elided (implicit) lifetimes are valid:
+    - Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).
+    - If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.
+    - If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
+    </div>
     <br>
     <br>
     <br>
