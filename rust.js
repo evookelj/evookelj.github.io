@@ -8,3 +8,9 @@ function homeScroll(){
     
     window.scrollBy(0,rect.top); 
 }
+
+function openInNewTab(fxn) {
+	var url = "https://play.rust-lang.org/?code=".concat(encodeURI(fxn));
+  	var win = window.open(url, '_blank');
+  	win.focus();
+}
