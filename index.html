@@ -11,10 +11,10 @@
 
     <div id="navigate">
         <ul>
-            <li><button onClick="scroll1()" type="button" value="Why Rust"/>Why Rust</li>
-            <li><button onClick="scroll1()" type="button" value="Ownership"/>Ownership</li>
-            <li><button onClick="scroll1()" type="button" value="References and Borrowing"/>References and Borrowing</li>
-            <li><button onClick="scroll1()" type="button" value="Lifetimes"/>Lifetimes</li>
+            <li><button onClick="scroll1('why-rust')" type="button" value="Why Rust"/>Why Rust</li>
+            <li><button onClick="scroll1('ownership')" type="button" value="Ownership"/>Ownership</li>
+            <li><button onClick="scroll1('ref-and-borrow')" type="button" value="References and Borrowing"/>References and Borrowing</li>
+            <li><button onClick="scroll1('lifetimes')" type="button" value="Lifetimes"/>Lifetimes</li>
         </ul>
     </div>
 
@@ -22,7 +22,7 @@
   <body>
 
     <div class = "info-block">
-    <h3>Why Rust</h3>
+    <h3 id="why-rust">Why Rust</h3>
     <ul>
         <li>Good balance between low level verbosity and high level productivity</li>
         <li>Rust has a focus on safety and speed</li>
@@ -34,7 +34,7 @@
     </div>
 
     <div class = "info-block">
-    <h3>Ownership</h3>
+    <h3 id="ownership">Ownership</h3>
     <ul>
         <li>Variable bindings have ownership of what they're bound to</li>
         <li>let v = vec![1,2,3];</li>
@@ -51,7 +51,7 @@
     </div>
 
     <div class = "info-block">
-    <h3>References and Borrowing</h3>
+    <h3 id="ref-and-borrow">References and Borrowing</h3>
     <ul>
         <li>let v2 = &v;</li>
         <li>using & makes v2 a reference to v</li>
@@ -66,7 +66,7 @@
     </div>
 
     <div class = "info-block">
-    <h3>borrowing: the rulez</h3>
+    <h3 id="borrow-rulez">borrowing: the rulez</h3>
     <ul>
         <li>any borrow must last for a scope no greater than that of the owner</li>
         <li>you may have one or the other of these two kinds of borrows, but not both at the same time:</li>
@@ -78,7 +78,7 @@
     </div>
 
     <div class = "info-block">
-    <h3>Lifetimes</h3>
+    <h3 id="lifetimes">Lifetimes</h3>
     <ul>
         <li>Why they are useful
         <ul>
@@ -95,7 +95,7 @@
     </div>
 
     <div class = "info-block">
-    <h3>when elided lifetimes are valid: the rulez</h3>
+    <h3 id="lifetimes-rulez">when elided lifetimes are valid: the rulez</h3>
     <ul>
         <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
         <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
