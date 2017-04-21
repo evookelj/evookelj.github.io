@@ -14,21 +14,12 @@ body {
     background-color: #AC2832;
 }
 
-#why-rust {
-    background-color: aliceblue;
-}
-
-/*#info-block {
-    background-color: #000000;
-}
+code {
+   
+    border: 2px dotted black;
+   /*padding: 25px;
+    margin: 25px;
 */
-
-#ownership{
-    background-color: #DFD297
-}
-
-#borrow-rulez{
-    background-color: #FFFFFF;
 }
 
 #header {
