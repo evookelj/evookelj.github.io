@@ -1,3 +1,28 @@
+body {
+    background-color: #DFD297;
+}
+
+#bigTitle span {
+    background-color: #AC2832;
+}
+
+#why-rust {
+    background-color: aliceblue;
+}
+
+/*#info-block {
+    background-color: #000000;
+}
+*/
+
+#ownership{
+    background-color: #DFD297
+}
+
+#borrow-rulez{
+    background-color: #FFFFFF;
+}
+
 #header {
 	text-align: center;
 }
@@ -11,6 +36,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	position: relative;
+	
 }
 
 #navigate button {
