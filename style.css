@@ -3,6 +3,14 @@ body {
 }
 
 #bigTitle span {
+    color: #DFD297;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    margin: 0 -5px;
+    padding: 0 20px;
     background-color: #AC2832;
 }
 
@@ -35,8 +43,7 @@ body {
 	display: inline-block;
 	padding-left: 10px;
 	padding-right: 10px;
-	position: relative;
-	
+	position: relative;	
 }
 
 #navigate button {
@@ -47,4 +54,5 @@ body {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
   	margin: 0 -5px;
   	padding: 0 20px;
+	background-color: aliceblue;
 }
