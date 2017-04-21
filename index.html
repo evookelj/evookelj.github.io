@@ -21,62 +21,78 @@
 
     <h3>Why Rust</h3>
     <ul>
-    <li>Good balance between low level verbosity and high level productivity</li>
-    <li>Rust has a focus on safety and speed</li>
-    <li>Great memory safety</li>
-    <li>Automatic garbage collection</li>
-    <li>Rust won the first place for Most Loved Programming Language of 2016 in the Stack Overflow Developer Survey !!! :)</li>
+        <li>Good balance between low level verbosity and high level productivity</li>
+        <li>Rust has a focus on safety and speed</li>
+        <li>Great memory safety</li>
+        <li>Automatic garbage collection</li>
+        <li>Rust won the first place for Most Loved Programming Language of 2016 in the Stack Overflow Developer Survey !!! :)</li>
+    </ul>
     </div>
-    <div class = "info-block">
-    Ownership
-    - Variable bindings have ownership of what they're bound to
-    - let v = vec![1,2,3];
-    - v comes into scope
-    - vector is created on stack
-    - space for elements is allocated on heap
-    - v goes out of scope -> Rust cleans stack and heap of v
-    - exactly one binding has ownership of resource
-    - let v2 = v;
-    - shallow copy of v created on stack but not in heap
-    - so now v cannot be used: v2 is the only valid connection to v
-    </div>
-    <div class = "info-block">
 
-    References and Borrowing
-    - let v2 = &v;
-    - using & makes v2 a reference to v
-    - this lets it borrow ownership (resource not deallocated once v2 is out of scope)
-    - allows you to continue referring to v once v2 is out of scope
-    - let v2 = &mut v;
-    - makes a mutable reference to v (in Rust, all variable bindings are immutable by default)
-    - in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )
-    - Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)
-    </div>
     <div class = "info-block">
-    borrowing: the rulez
-    - any borrow must last for a scope no greater than that of the owner
-    - you may have one or the other of these two kinds of borrows, but not both at the same time:
-    - one or more references (&T) to a resource
-    - exactly one mutable reference (&mut T)
-    - avoids a data race
+    <h3>Ownership</h3>
+    <ul>
+        <li>Variable bindings have ownership of what they're bound to</li>
+        <li>let v = vec![1,2,3];</li>
+        <li>v comes into scope</li>
+        <li>vector is created on stack</li>
+        <li>space for elements is allocated on heap</li>
+        <li>v goes out of scope -> Rust cleans stack and heap of v</li>
+        <li>exactly one binding has ownership of resource</li>
+        <li>let v2 = v;</li>
+        <li>shallow copy of v created on stack but not in heap</li>
+        <li>so now v cannot be used: v2 is the only valid connection to v</li>
+    </ul>
     </div>
+
     <div class = "info-block">
-    Lifetimes
-    - Why they are useful
-    - I acquire a handle to resource x
-    - I lend you a reference to resource x (let's call it y)
-    - I am done with x and deallocate it
-    - You decide to use y (which uses x)
-    - Dangling pointer (Rust: Nuh uh!)
-    - Lifetime: the scope that a reference is valid for, or how long the resource lives
-    - Scope of a reference: think of it as from the curly brace before it to the one matching that
+    <h3>References and Borrowing</h3>
+    <ul>
+        <li>let v2 = &v;</li>
+        <li>using & makes v2 a reference to v</li>
+        <li>this lets it borrow ownership (resource not deallocated once v2 is out of scope)</li>
+        <li>allows you to continue referring to v once v2 is out of scope</li>
+        <li>let v2 = &mut v;</li>
+        <li>makes a mutable reference to v (in Rust, all variable bindings are immutable by default)</li>
+        <li>in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )</li>
+        <li>Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)</li>
+    </ul>
     </div>
+
     <div class = "info-block">
-    elided lifetimes: the rulez
-    - When elided (implicit) lifetimes are valid:
-    - Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).
-    - If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.
-    - If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
+    <h3>borrowing: the rulez</h3>
+    <ul>
+        <li>any borrow must last for a scope no greater than that of the owner</li>
+        <li>you may have one or the other of these two kinds of borrows, but not both at the same time:</li>
+        <li>one or more references (&T) to a resource</li>
+        <li>exactly one mutable reference (&mut T)</li>
+        <li>avoids a data race</li>
+    </ul>
+    </div>
+
+    <div class = "info-block">
+    <h3>Lifetimes</h3>
+    <ul>
+        <li>Why they are useful
+        <ul>
+            <li>I acquire a handle to resource x</li>
+            <li>I lend you a reference to resource x (let's call it y)</li>
+            <li>I am done with x and deallocate it</li>
+            <li>You decide to use y (which uses x)</li>
+            <li>Dangling pointer (Rust: Nuh uh!)</li>
+        </ul>
+        <li>Lifetime: the scope that a reference is valid for, or how long the resource lives</li>
+        <li>Scope of a reference: think of it as from the curly brace before it to the one matching that</li>
+    </ul>
+    </div>
+
+    <div class = "info-block">
+    <h3>when elided lifetimes are valid: the rulez</h3>
+    <ul>
+        <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
+        <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
+        <li>If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.</li>
+    </ul>
     </div>
     <br>
     <br>
