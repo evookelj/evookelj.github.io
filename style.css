@@ -14,12 +14,18 @@ body {
     background-color: #AC2832;
 }
 
-code {
-   
-    border: 2px dotted black;
-   /*padding: 25px;
+img {
+    background-color: none;
+}
+
+.code {
+    background-color: #FFFFFF;
+    border: 2px solid #F2EFE4;
+    padding: 15px;
     margin: 25px;
-*/
+    margin-right: 700px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+
 }
 
 #header {
@@ -45,5 +51,5 @@ code {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
   	margin: 0 -5px;
   	padding: 0 20px;
-	background-color: aliceblue;
+	background-color: #FFFFFF;
 }
