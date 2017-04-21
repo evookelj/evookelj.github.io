@@ -48,14 +48,16 @@
         <li>shallow copy of v created on stack but not in heap</li>
         <li>so now v cannot be used: v2 is the only valid connection to v</li>
     </ul>
+
     <code>
-        fn main() {<br>
-            let v = vec![1, 2, 3];<br>
-            let v2 = v;<br>
-            println!("v[0] is: {}", v[0]);<br>
-        }<br>
+        fn main() {&nbsp;
+            let v = vec![1, 2, 3];&nbsp;
+            let v2 = v;&nbsp;
+            println!("v[0] is: {}", v[0]);&nbsp;
+        }&nbsp;
     </code>
-    <p>Test out the above example <button type="button" onClick="openInNewTab('fn main() {println!(&quot;hello&quot;)}')">here</button>!</p>
+
+    <p>Test out the above example <button type="button" onClick="openInNewTab('fn main() {&nbsp;let v = vec![1, 2, 3];&nbsp;let v2 = v;&nbsp;println!(&quot;v[0] is: {}&quot;, v[0]);&nbsp;}')">here</button>!</p>
     <button type="button" onClick="homeScroll()">Back to top</button>
     </div>
 
@@ -71,6 +73,26 @@
         <li>in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )</li>
         <li>Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)</li>
     </ul>
+
+    <code>
+    fn main() {&nbsp;
+        fn sum_vec(v: &Vec<i32>) -> i32 {&nbsp;
+            return v.iter().fold(0, |a, &b| a + b);&nbsp;
+        }&nbsp;
+        fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {&nbsp;
+            let s1 = sum_vec(v1);&nbsp;
+            let s2 = sum_vec(v2);&nbsp;
+            // Return the answer.&nbsp;
+            s1 + s2&nbsp;
+        }&nbsp;
+        let v1 = vec![1, 2, 3];&nbsp;
+        let v2 = vec![4, 5, 6];&nbsp;
+        let answer = foo(&v1, &v2);&nbsp;
+        println!("{}", answer);&nbsp;
+    }&nbsp;
+    </code>
+    <p>Test out the above example <button type="button" onClick="openInNewTab('fn main() {&nbsp;fn sum_vec(v: &Vec<i32>) -> i32 {&nbsp;return v.iter().fold(0, |a, &b| a + b);&nbsp;}&nbsp;fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {&nbsp;let s1 = sum_vec(v1);&nbsp;let s2 = sum_vec(v2);&nbsp;// Return the answer.&nbsp;s1 + s2&nbsp;}&nbsp;let v1 = vec![1, 2, 3];&nbsp;let v2 = vec![4, 5, 6];&nbsp;let answer = foo(&v1, &v2);&nbsp;println!(&quot;{}&quot;, answer);&nbsp;}')">here</button>!</p>
+
     </div>
 
     <div class = "info-block">
