@@ -1,4 +1,7 @@
-function pageScroll() {
-    	window.scrollBy(0,50); // horizontal and vertical scroll increments
-    	scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
+function scroll1() {
+    window.scrollBy(0,5000);
+}
+
+function homeScroll(){
+    window.scrollBy(0,-50000000); 
 }
