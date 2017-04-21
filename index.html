@@ -49,13 +49,13 @@
         <li>so now v cannot be used: v2 is the only valid connection to v</li>
     </ul>
 
-    <code>
-        fn main() {&nbsp;
-            let v = vec![1, 2, 3];&nbsp;
-            let v2 = v;&nbsp;
-            println!("v[0] is: {}", v[0]);&nbsp;
-        }&nbsp;
-    </code>
+    <p class="code">
+        fn main() {<br>
+            let v = vec![1, 2, 3];<br>
+            let v2 = v;<br>
+            println!("v[0] is: {}", v[0]);<br>
+        }<br>
+    </p>
 
     <p>Test out the above example <button type="button" onClick="openInNewTab('')">here</button>!</p>
     <button type="button" onClick="homeScroll()">Back to top</button>
@@ -74,23 +74,23 @@
         <li>Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)</li>
     </ul>
 
-    <code>
-    fn main() {&#13;
-        fn sum_vec(v: &Vec<i32>) -> i32 {&#13;
-            return v.iter().fold(0, |a, &b| a + b);&#13;
-        }&#13;
-        fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {&#13;
-            let s1 = sum_vec(v1);&#13;
-            let s2 = sum_vec(v2);&#13;
-            // Return the answer.&#13;
-            s1 + s2&#13;
-        }&#13;
-        let v1 = vec![1, 2, 3];&#13;
-        let v2 = vec![4, 5, 6];&#13;
-        let answer = foo(&v1, &v2);&#13;
-        println!("{}", answer);&#13;
-    }&#13;
-    </code>
+    <p class="code">
+    fn main() {<br>
+        fn sum_vec(v: &Vec<i32>) -> i32 {<br>
+            return v.iter().fold(0, |a, &b| a + b);<br>
+        }<br>
+        fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {<br>
+            let s1 = sum_vec(v1);<br>
+            let s2 = sum_vec(v2);<br>
+            // Return the answer.<br>
+            s1 + s2<br>
+        }<br>
+        let v1 = vec![1, 2, 3];<br>
+        let v2 = vec![4, 5, 6];<br>
+        let answer = foo(&v1, &v2);<br>
+        println!("{}", answer);<br>
+    }<br>
+    </p>
     <p>Test out the above example <button type="button" onClick="openInNewTab('')">here</button>!</p>
 
     </div>
