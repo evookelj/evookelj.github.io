@@ -91,7 +91,7 @@
         println!("{}", answer);<br>
     }<br>
     </p>
-    <p>Test out the above example <button type="button" onClick="openInNewTab('')">here</button>!</p>
+    <p>Test out the above example <button type="button" onClick="openInNewTab('fn main() {\n\tfn sum_vec(v: &Vec<i32>) -> i32 {\n\t\treturn v.iter().fold(0, |a, &b| a + b);\n\t}\n\tfn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {\n\t\tlet s1 = sum_vec(v1);\n\t\tlet s2 = sum_vec(v2);\n\t\ts1 + s2\n\t}\n\tlet v1 = vec![1, 2, 3];\n\tlet v2 = vec![4, 5, 6];\n\tlet answer = foo(&v1, &v2);\n\tprintln!(&quot;{}&quot;, answer);\n}\n')">here</button>!</p>
 
     </div>
 
