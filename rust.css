@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    background-color: #faf3dd;
+    /*background-color: #faf3dd;*/
+    background-image: url("back.png");
 }
 
 #bigTitle span {
