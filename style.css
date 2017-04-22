@@ -1,3 +1,7 @@
+html {
+    padding: 50px;
+}
+
 body {
     background-color: #DFD297;
 }
@@ -12,24 +16,19 @@ body {
     margin: 0 -5px;
     padding: 0 20px;
     background-color: #AC2832;
+    font-size: 200%;
 }
 
 img {
     background-color: none;
 }
 
-.code {
-    background-color: #FFFFFF;
-    border: 2px solid #F2EFE4;
-    padding: 15px;
-    margin: 25px;
-    margin-right: 700px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-
-}
-
 #header {
 	text-align: center;
+}
+
+#header h2 {
+    font-size: 150%;
 }
 
 #navigate {
@@ -52,4 +51,14 @@ img {
   	margin: 0 -5px;
   	padding: 0 20px;
 	background-color: #FFFFFF;
+}
+
+.code {
+    background-color: #FFFFFF;
+    border: 2px solid #F2EFE4;
+    padding: 15px;
+    margin: 25px;
+    margin-right: 700px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    font-family: Consolas, Courier New, monospace;
 }

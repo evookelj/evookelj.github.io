@@ -51,9 +51,9 @@
 
     <p class="code">
         fn main() {<br>
-            let v = vec![1, 2, 3];<br>
-            let v2 = v;<br>
-            println!("v[0] is: {}", v[0]);<br>
+            &emsp;let v = vec![1, 2, 3];<br>
+            &emsp;let v2 = v;<br>
+            &emsp;println!("v[0] is: {}", v[0]);<br>
         }<br>
     </p>
 
@@ -76,19 +76,19 @@
 
     <p class="code">
     fn main() {<br>
-        fn sum_vec(v: &Vec<i32>) -> i32 {<br>
-            return v.iter().fold(0, |a, &b| a + b);<br>
-        }<br>
-        fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {<br>
-            let s1 = sum_vec(v1);<br>
-            let s2 = sum_vec(v2);<br>
-            // Return the answer.<br>
-            s1 + s2<br>
-        }<br>
-        let v1 = vec![1, 2, 3];<br>
-        let v2 = vec![4, 5, 6];<br>
-        let answer = foo(&v1, &v2);<br>
-        println!("{}", answer);<br>
+        &emsp;fn sum_vec(v: &Vec<i32>) -> i32 {<br>
+            &emsp;&emsp;return v.iter().fold(0, |a, &b| a + b);<br>
+        &emsp;}<br>
+        &emsp;fn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {<br>
+            &emsp;&emsp;let s1 = sum_vec(v1);<br>
+            &emsp;&emsp;let s2 = sum_vec(v2);<br>
+            &emsp;&emsp;// Return the answer.<br>
+            &emsp;&emsp;s1 + s2<br>
+        &emsp;}<br>
+        &emsp;let v1 = vec![1, 2, 3];<br>
+        &emsp;let v2 = vec![4, 5, 6];<br>
+        &emsp;let answer = foo(&v1, &v2);<br>
+        &emsp;println!("{}", answer);<br>
     }<br>
     </p>
     <p>Test out the above example <button type="button" onClick="openInNewTab('fn main() {\n\tfn sum_vec(v: &Vec<i32>) -> i32 {\n\t\treturn v.iter().fold(0, |a, &b| a + b);\n\t}\n\tfn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {\n\t\tlet s1 = sum_vec(v1);\n\t\tlet s2 = sum_vec(v2);\n\t\ts1 + s2\n\t}\n\tlet v1 = vec![1, 2, 3];\n\tlet v2 = vec![4, 5, 6];\n\tlet answer = foo(&v1, &v2);\n\tprintln!(&quot;{}&quot;, answer);\n}\n')">here</button>!</p>
@@ -124,12 +124,13 @@
 
     <p class="code">
         struct Foo<'a> {<br>
-            x: &'a i32,<br>
+            &emsp;x: &'a i32,<br>
         }<br>
         fn main() {<br>
-            let y = &5; // This is the same as `let _y = 5; let y = &_y;<br>
-            let f = Foo { x: y };<br>
-            println!("{}", f.x);<br>
+            &emsp;let y = &5; //Same as 'let _y = 5;'<br>
+            &emsp;let y = &_y;<br>
+            &emsp;let f = Foo { x: y };<br>
+            &emsp;println!("{}", f.x);<br>
         }<br>
     </p>
     <p>Test out the above example <button type="button" onClick="openInNewTab('struct Foo<\'a> {\n\tx: &\'a i32,\n}\nfn main() {\n\tlet y = &5;\n\tlet f = Foo { x: y };\n\tprintln!(\&quot;{}\&quot;, f.x);\n}\n')">here</button>!</p>
