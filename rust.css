@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    /*background-color: #faf3dd;*/
     background-image: url("back.png");
 }
 
@@ -74,6 +73,8 @@ img {
 
 .info-block h3 {
     color: #c884a6;
+    font-size: 200%;
+    text-transform: uppercase;
 }
 
 .code {
