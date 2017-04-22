@@ -1,13 +1,15 @@
 html {
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 body {
-    background-color: #DFD297;
+    padding: 10px;
+    background-color: #cce4f7;
 }
 
 #bigTitle span {
-    color: #DFD297;
+    color: #f7f7ff;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     border-bottom-left-radius: 3px;
@@ -15,7 +17,7 @@ body {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     margin: 0 -5px;
     padding: 0 20px;
-    background-color: #AC2832;
+    background-color: #c2948a;
     font-size: 200%;
 }
 
@@ -53,6 +55,15 @@ img {
 	background-color: #FFFFFF;
 }
 
+.info-block ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.info-block li:hover {
+    font-size: 120%;
+}
+
 .code {
     background-color: #FFFFFF;
     border: 2px solid #F2EFE4;
@@ -61,4 +72,13 @@ img {
     margin-right: 700px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     font-family: Consolas, Courier New, monospace;
+}
+
+.test button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
 }
