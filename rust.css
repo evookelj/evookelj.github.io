@@ -27,8 +27,21 @@ img {
 	text-align: center;
 }
 
+#header h1 {
+    transition: all .5s ease-in-out;
+}
+
+#header h1:hover {
+    transform: scale(1.1);
+}
+
 #header h2 {
     font-size: 150%;
+    transition: all .5s ease-in-out;
+}
+
+#header h2:hover {
+    transform: scale(1.1);
 }
 
 #navigate {
