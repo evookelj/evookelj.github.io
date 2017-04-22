@@ -121,6 +121,18 @@
         <li>Lifetime: the scope that a reference is valid for, or how long the resource lives</li>
         <li>Scope of a reference: think of it as from the curly brace before it to the one matching that</li>
     </ul>
+
+    <p class="code">
+        struct Foo<'a> {<br>
+            x: &'a i32,<br>
+        }<br>
+        fn main() {<br>
+            let y = &5; // This is the same as `let _y = 5; let y = &_y;<br>
+            let f = Foo { x: y };<br>
+            println!("{}", f.x);<br>
+        }<br>
+    </p>
+    <p>Test out the above example <button type="button" onClick="openInNewTab('struct Foo<\'a> {\n\tx: &\'a i32,\n}\nfn main() {\n\tlet y = &5;\n\tlet f = Foo { x: y };\n\tprintln!(\&quot;{}\&quot;, f.x);\n}\n')">here</button>!</p>
     </div>
 
     <div class = "info-block">
