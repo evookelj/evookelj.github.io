@@ -7,6 +7,7 @@ body {
 }
 
 #bigTitle span {
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
     color: #faf3dd;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -36,6 +37,7 @@ img {
 }
 
 #header h2 {
+    font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif; 
     font-size: 150%;
     transition: all .5s ease-in-out;
 }
@@ -56,6 +58,7 @@ img {
 }
 
 #navigate button {
+    font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif; 
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	border-bottom-left-radius: 6px;
@@ -72,9 +75,14 @@ img {
 }
 
 .info-block h3 {
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
     color: #c884a6;
     font-size: 200%;
     text-transform: uppercase;
+}
+
+.info-block {
+    font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif; 
 }
 
 .code {
