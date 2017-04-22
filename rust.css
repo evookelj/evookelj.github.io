@@ -19,17 +19,17 @@ body {
     background-color: #c884a6;
     font-size: 200%;
 }
-
-#bigTitle a {
-    text-decoration: none
-}
-
 img {
     background-color: none;
 }
 
 #header {
 	text-align: center;
+}
+
+#header a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 #header h1 {
