@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RUST by Team Doppelgänger</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="rust.js" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="rust.css">
-<style type="text/css">
-    /* Some custom styles to beautify this example */
-    .demo-content{
-        padding: 15px;
-        font-size: 18px;
-        min-height: 300px;
-        background: #dbdfe5;
-        margin-bottom: 10px;
-    }
-    .demo-content.bg-alt{
-        background: #abb1b8;
-    }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RUST by Team Doppelgänger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="rust.js" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="rust.css">
+    <style type="text/css">
+      /* Some custom styles to beautify this example */
+      .demo-content{
+      padding: 15px;
+      font-size: 18px;
+      min-height: 300px;
+      background: #dbdfe5;
+      margin-bottom: 10px;
+      }
+      .demo-content.bg-alt{
+      background: #abb1b8;
+      }
+    </style>
+  </head>
+  <body>
 
     <div id="header">
-        <h1 id="bigTitle"><a href="https://www.rust-lang.org/en-US/"><span><img src="rust.png" height="6%" width="6%">UST</span></a></h1>
-        <h2><a href="https://github.com/evookelj/evookelj.github.io">Team Doppelgänger 2.0: EV and BSS</a></h2>
+      <h1 id="bigTitle"><a href="https://www.rust-lang.org/en-US/"><span><img src="rust.png" height="6%" width="6%">UST</span></a></h1>
+      <h2><a href="https://github.com/evookelj/evookelj.github.io">Team Doppelgänger 2.0: EV and BSS</a></h2>
     </div>
 
     <div id="navigate">
-        <ul>
-            <li><button onClick="scroll1('why-rust')" type="button" value="Why Rust"/>Why Rust</li>
-            <li><button onClick="scroll1('ownership')" type="button" value="Ownership"/>Ownership</li>
-            <li><button onClick="scroll1('ref-and-borrow')" type="button" value="References and Borrowing"/>References and Borrowing</li>
-            <li><button onClick="scroll1('lifetimes')" type="button" value="Lifetimes"/>Lifetimes</li>
-        </ul>
+      <ul>
+        <li><button onClick="scroll('why-rust')" type="button" value="Why Rust"/>Why Rust</li>
+        <li><button onClick="scroll('ownership')" type="button" value="Ownership"/>Ownership</li>
+        <li><button onClick="scroll('ref-and-borrow')" type="button" value="References and Borrowing"/>References and Borrowing</li>
+        <li><button onClick="scroll('lifetimes')" type="button" value="Lifetimes"/>Lifetimes</li>
+      </ul>
     </div>
     <br><br><br><br><br>
     <div class="container">
@@ -48,17 +48,21 @@
         <!--<div class="col-xs-6">-->
         <div class = "info-block">
           <h3 id="why-rust">Why Rust?</h3>
-	  <br>
-          Rust has:
-          <ul>
-            <li>a good balance between low level verbosity and high level productivity!</li>
-            <li>a focus on safety and speed!</li>
-            <li>great memory safety features!</li>
-            <li>automatic garbage collection!</li>
-            <li>a first place award for Most Loved Programming Language of 2016 in the Stack Overflow Developer Survey!</li>
-          </ul>
+	  <div id = "info-text">
+	    <br>
+            Rust has:
+            <ul>
+              <li>a good balance between low level verbosity and high level productivity!</li>
+              <li>a focus on safety and speed!</li>
+              <li>great memory safety features!</li>
+              <li>automatic garbage collection!</li>
+              <li>a first place award for Most Loved Programming Language of 2016 in the Stack Overflow Developer Survey!</li>
+            </ul>
+	  </div>
           <p>So really, the question is why <i>not</i> Rust?</p>
-          <button type="button" onClick="homeScroll()">Back to top</button>
+	  <div id="info-button">
+            <button type="button" onClick="homeScroll()">Back to top</button>
+	  </div>
         </div>
 	<br><br><br><br><br>
         <!--</div>-->
@@ -66,21 +70,22 @@
         <div class = "info-block">
           <h3 id="ownership">Ownership</h3>
 	  <br>
-          <ul>
-            <li>Variable bindings have ownership of what they're bound to</li>
-            <li>let v = vec![1,2,3];</li>
+	  <div id = "info-text">
             <ul>
-              <li>v comes into scope</li>
-              <li>vector is created on stack</li>
-              <li>space for elements is allocated on heap</li>
-              <li>v goes out of scope -> Rust cleans stack and heap of v</li>
+              <li>Variable bindings have ownership of what they're bound to</li>
+              <li>let v = vec![1,2,3];</li>
+              <ul>
+		<li>v comes into scope</li>
+		<li>vector is created on stack</li>
+		<li>space for elements is allocated on heap</li>
+		<li>v goes out of scope -> Rust cleans stack and heap of v</li>
+              </ul>
+              <li>exactly one binding has ownership of resource</li>
+              <li>let v2 = v;</li>
+              <li>shallow copy of v created on stack but not in heap</li>
+              <li>so now v cannot be used: v2 is the only valid connection to v</li>
             </ul>
-            <li>exactly one binding has ownership of resource</li>
-            <li>let v2 = v;</li>
-            <li>shallow copy of v created on stack but not in heap</li>
-            <li>so now v cannot be used: v2 is the only valid connection to v</li>
-          </ul>
-
+	  </div>
           <p class="code">
             fn main() {<br>
             &emsp;let v = vec![1, 2, 3];<br>
@@ -90,7 +95,10 @@
           </p>
 
           <p class="test"><button type="button" onClick="openInNewTab('fn main() {\n\tlet v = vec![1, 2, 3];\n\tlet v2 = v;\n\tprintln!(&quot;v[0] is: {}&quot;, v[0]);\n}\n')">Test code</button></p>
-	  <button type="button" onClick="homeScroll()">Back to top</button>
+	  <br><br>
+	  <div id="info-button">
+	    <button type="button" onClick="homeScroll()">Back to top</button>
+	  </div>
         </div>
       </div>
       <br><br><br><br><br>
@@ -102,16 +110,18 @@
       <div class = "info-block">
         <h3 id="ref-and-borrow">References and Borrowing</h3>
 	<br>
-        <ul>
-          <li>let v2 = &v;</li>
-          <li>using & makes v2 a reference to v</li>
-          <li>this lets it borrow ownership (resource not deallocated once v2 is out of scope)</li>
-          <li>allows you to continue referring to v once v2 is out of scope</li>
-          <li>let v2 = &mut v;</li>
-          <li>makes a mutable reference to v (in Rust, all variable bindings are immutable by default)</li>
-          <li>in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )</li>
-          <li>Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)</li>
-        </ul>
+	<div id = "info-text">
+          <ul>
+            <li>let v2 = &v;</li>
+            <li>using & makes v2 a reference to v</li>
+            <li>this lets it borrow ownership (resource not deallocated once v2 is out of scope)</li>
+            <li>allows you to continue referring to v once v2 is out of scope</li>
+            <li>let v2 = &mut v;</li>
+            <li>makes a mutable reference to v (in Rust, all variable bindings are immutable by default)</li>
+            <li>in order to do this, v must have been declared as mutable ( let mut v = vec![1,2,3]; )</li>
+            <li>Use & to create a reference (get the memory address of a resource), and use * to dereference (get the resource located at memory address)</li>
+          </ul>
+	</div>
 
         <p class="code">
           fn main() {<br>
@@ -131,8 +141,10 @@
                 }<br>
         </p>
         <p class="test"><button type="button" onClick="openInNewTab('fn main() {\n\tfn sum_vec(v: &Vec<i32>) -> i32 {\n\t\treturn v.iter().fold(0, |a, &b| a + b);\n\t}\n\tfn foo(v1: &Vec<i32>, v2: &Vec<i32>) -> i32 {\n\t\tlet s1 = sum_vec(v1);\n\t\tlet s2 = sum_vec(v2);\n\t\ts1 + s2\n\t}\n\tlet v1 = vec![1, 2, 3];\n\tlet v2 = vec![4, 5, 6];\n\tlet answer = foo(&v1, &v2);\n\tprintln!(&quot;{}&quot;, answer);\n}\n')">Test code</button></p>
-	<br>
-	<button type="button" onClick="homeScroll()">Back to top</button>
+	<br><br>
+	<div id="info-button">
+	  <button type="button" onClick="homeScroll()">Back to top</button>
+	</div>
       </div>
       <br><br><br><br><br>
       <!--</div>
@@ -140,15 +152,19 @@
       <div class = "info-block">
         <h3 id="borrow-rulez">borrowing: the rulez</h3>
 	<br>
-        <ul>
-          <li>any borrow must last for a scope no greater than that of the owner</li>
-          <li>you may have one or the other of these two kinds of borrows, but not both at the same time:</li>
-          <li>one or more references (&T) to a resource</li>
-          <li>exactly one mutable reference (&mut T)</li>
-          <li>avoids a data race</li>
-        </ul>
-	<br>
-        <button type="button" onClick="homeScroll()">Back to top</button>
+	<div id = "info-text">
+          <ul>
+            <li>any borrow must last for a scope no greater than that of the owner</li>
+            <li>you may have one or the other of these two kinds of borrows, but not both at the same time:</li>
+            <li>one or more references (&T) to a resource</li>
+            <li>exactly one mutable reference (&mut T)</li>
+            <li>avoids a data race</li>
+          </ul>
+	  <br>
+	</div>
+	<div id="info-button">
+          <button type="button" onClick="homeScroll()">Back to top</button>
+	</div>
       </div>
     </div>
     <br><br><br><br><br>
@@ -158,13 +174,17 @@
     <div class = "info-block">
       <h3 id="lifetimes-rulez">when elided lifetimes are valid: the rulez</h3>
       <br>
-      <ul>
-        <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
-        <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
-        <li>If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.</li>
-      </ul>
+      <div id = "info-text">
+	<ul>
+          <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
+          <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
+          <li>If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.</li>
+	</ul>
+      </div>
       <br>
-      <button type="button" onClick="homeScroll()">Back to top</button>
+      <div id="info-button">
+	<button type="button" onClick="homeScroll()">Back to top</button>
+      </div>
     </div>
     <br><br><br><br><br>
     <!-- </div>
@@ -172,19 +192,20 @@
     <div class = "info-block">
       <h3 id="lifetimes">Lifetimes</h3>
       <br>
-      <ul>
-        <li>Why they are useful
-          <ul>
-            <li>I acquire a handle to resource x</li>
-            <li>I lend you a reference to resource x (let's call it y)</li>
-            <li>I am done with x and deallocate it</li>
-            <li>You decide to use y (which uses x)</li>
-            <li>Dangling pointer (C: ¯\_(ツ)_/¯, Rust: Nuh uh!)</li>
-          </ul>
-        <li>Lifetime: the scope that a reference is valid for, or how long the resource lives</li>
-        <li>Scope of a reference: think of it as from the curly brace before it to the one matching that</li>
-      </ul>
-
+      <div id = "info-text">
+	<ul>
+          <li>Why they are useful
+            <ul>
+              <li>I acquire a handle to resource x</li>
+              <li>I lend you a reference to resource x (let's call it y)</li>
+              <li>I am done with x and deallocate it</li>
+              <li>You decide to use y (which uses x)</li>
+              <li>Dangling pointer (C: ¯\_(ツ)_/¯, Rust: Nuh uh!)</li>
+            </ul>
+          <li>Lifetime: the scope that a reference is valid for, or how long the resource lives</li>
+          <li>Scope of a reference: think of it as from the curly brace before it to the one matching that</li>
+	</ul>
+      </div>
       <p class="code">
         struct Foo<'a> {<br>
           &emsp;x: &'a i32,<br>
@@ -197,10 +218,12 @@
           }<br>
       </p>
       <p class="test"><button type="button" onClick="openInNewTab('struct Foo<\'a> {\n\tx: &\'a i32,\n}\nfn main() {\n\tlet y = &5;\n\tlet f = Foo { x: y };\n\tprintln!(\&quot;{}\&quot;, f.x);\n}\n')">Test code</button></p>
-      <br>
-       <button type="button" onClick="homeScroll()">Back to top</button>
+      <br><br>
+      <div id="info-button">
+	<button type="button" onClick="homeScroll()">Back to top</button>
+      </div>
     </div>
     <!-- </div>
          </div>-->
-</body>
+  </body>
 </html>  

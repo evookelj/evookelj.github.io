@@ -1,4 +1,4 @@
-function scroll1(id) {
+function scroll(id) {
     var rect = document.getElementById(id).getBoundingClientRect();
     window.scrollBy(0,rect.top);
 }
