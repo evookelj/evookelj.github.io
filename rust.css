@@ -64,16 +64,16 @@ img {
 }
 
 #navigate button {
-    font-size: 130%;
-    font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif; 
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-	border-bottom-left-radius: 6px;
-	border-bottom-right-radius: 6px;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-  	margin: 0 -5px;
-  	padding: 0 20px;
-	background-color: #FFFFFF;
+    font-size: 110%;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+    margin: 0 -5px;
+    padding: 0 20px;
+    background-color: #FFFFFF;
 }
 
 #navigate button:hover, button:focus {
@@ -81,6 +81,7 @@ img {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #ac2832;
     text-decoration: none;
 }
+
 
 .info-block h3 {
     font-family: Copperplate,Copperplate Gothic Light,fantasy;
@@ -129,8 +130,9 @@ img {
 }
 
 .test button:hover, button:focus {
-    background: #bd98aa;
-    border: solid 1px #bd98aa;
+color: 
+    background: #faf3dd;
+    border: solid 1px #faf3dd;
     text-decoration: none;
 }
 
@@ -142,11 +144,12 @@ img {
     border: solid 1px #bd98aa;
 }
 
-/*.info-block*/
+
 
 #info-button button:hover, button:focus {
-    background: #e17f87;
-    border: solid 1px #e17f87;
+    background: #ac2832;
+    color: #FFF;
+    border: solid 1px #ac2832;
     text-decoration: none;
 }
 
