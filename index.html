@@ -31,6 +31,7 @@
     <div id="header">
       <h1 id="bigTitle"><a href="https://www.rust-lang.org/en-US/"><span><img src="rust.png" height="6%" width="6%">UST</span></a></h1>
       <h2><a href="https://github.com/evookelj/evookelj.github.io">Team Doppelgänger 2.0: EV and BSS</a></h2>
+      <br><br>
     </div>
 
     <div id="navigate">
@@ -38,7 +39,9 @@
         <li><button onClick="scroll('why-rust')" type="button" value="Why Rust"/>Why Rust</li>
         <li><button onClick="scroll('ownership')" type="button" value="Ownership"/>Ownership</li>
         <li><button onClick="scroll('ref-and-borrow')" type="button" value="References and Borrowing"/>References and Borrowing</li>
+	<li><button onClick="scroll('borrow-rulez')" type="button" value="Borrowing: the Rulez"/>Borrowing: the Rulez</li>
         <li><button onClick="scroll('lifetimes')" type="button" value="Lifetimes"/>Lifetimes</li>
+	<li><button onClick="scroll('lifetimes-rulez')" type="button" value="Elided Lifetimes"/>Elided Lifetimes</li>
       </ul>
     </div>
     <br><br><br><br><br>
@@ -60,6 +63,7 @@
             </ul>
 	  </div>
           <p>So really, the question is why <i>not</i> Rust?</p>
+	  <br>
 	  <div id="info-button">
             <button type="button" onClick="homeScroll()">Back to top</button>
 	  </div>
@@ -150,7 +154,7 @@
       <!--</div>
           <div class="col-xs-6">-->
       <div class = "info-block">
-        <h3 id="borrow-rulez">borrowing: the rulez</h3>
+        <h3 id="borrow-rulez">Borrowing: the Rulez</h3>
 	<br>
 	<div id = "info-text">
           <ul>
@@ -166,27 +170,11 @@
           <button type="button" onClick="homeScroll()">Back to top</button>
 	</div>
       </div>
-    </div>
+<!--    </div>-->
     <br><br><br><br><br>
     <!--</div>
         <div class="row">
           <div class="col-xs-6">-->
-    <div class = "info-block">
-      <h3 id="lifetimes-rulez">when elided lifetimes are valid: the rulez</h3>
-      <br>
-      <div id = "info-text">
-	<ul>
-          <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
-          <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
-          <li>If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.</li>
-	</ul>
-      </div>
-      <br>
-      <div id="info-button">
-	<button type="button" onClick="homeScroll()">Back to top</button>
-      </div>
-    </div>
-    <br><br><br><br><br>
     <!-- </div>
          <div class="col-xs-6">-->
     <div class = "info-block">
@@ -222,6 +210,23 @@
       <div id="info-button">
 	<button type="button" onClick="homeScroll()">Back to top</button>
       </div>
+      <br><br><br><br><br>
+      <div class = "info-block">
+      <h3 id="lifetimes-rulez">When Elided Lifetimes Are Valid: the Rulez</h3>
+      <br>
+      <div id = "info-text">
+	<ul>
+          <li>Each elided lifetime in a function's arguments becomes a distinct lifetime parameter (so, one distinct unsaid lifetime parameter per argument).</li>
+          <li>If there is exactly one input lifetime, that lifetime is assigned to all elided lifetimes in the return values of that function.</li>
+          <li>If there are multiple input lifetimes, but one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.</li>
+	</ul>
+      </div>
+      <br>
+      <div id="info-button">
+	<button type="button" onClick="homeScroll()">Back to top</button>
+      </div>
+    </div>
+    
     </div>
     <!-- </div>
          </div>-->
